@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-<<<<<<< HEAD
-=======
       - name: Setup Environment
         uses: ./.github/actions/setup
       - name: Run tests
@@ -30,7 +28,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Setup Environment
-        uses: ./.github/setup
+        uses: ./.github/actions/setup
       - name: Run audit
         run: yarn audit
 
@@ -41,7 +39,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Setup Environment
-        uses: ./.github/setup
+        uses: ./.github/actions/setup
       - name: Build packages
         run: |
           yarn build
@@ -57,4 +55,3 @@ jobs:
           name: Static Build folder
       - name: Display structure of downloaded files
         run: ls -R
->>>>>>> a08e39e ([Jaya] Add. setup.yml)
