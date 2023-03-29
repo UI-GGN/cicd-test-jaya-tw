@@ -33,7 +33,7 @@ jobs:
         aws --region us-east-1 s3 ls
     - name: Run Cf Template
       run: |
-        aws cloudformation deploy --stack-name ci-cd-test-stack-jaya --template-file cftemplate/bucket.yml
+        aws cloudformation deploy --stack-name ci-cd-test-stack-jaya1 --template-file cftemplate/bucket.yml
     - name: Build packages
       run: |
         yarn build
