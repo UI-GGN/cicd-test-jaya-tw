@@ -11,4 +11,4 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       AccessControl: Private
-      BucketName: "ci-cd-public-bucket-for-jaya"
+      BucketName: "ci-cd-public-bucket-for-jaya1"
