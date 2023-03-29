@@ -26,7 +26,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@master
       with:
         role-to-assume: ${{secrets.IAM_ROLE}}
-        aws-region: us-east-1
+        aws-region: ap-south-1
         role-session-name: samplerolesession
     - name: Copy files to the test website with the AWS CLI
       run: |
@@ -39,7 +39,7 @@ jobs:
         yarn build
     - name: Upload to S3
       run: |
-        aws s3 sync ./build s3://your-test-bucket-name-twcicd --delete
+        aws s3 sync ./build s3://ci-cd-public-bucket-for-jaya --delete
     - name: Upload to S3
       run: |
         aws cloudfront create-invalidation --distribution-id E2B8UOKCE3FAEE --paths "/*"
